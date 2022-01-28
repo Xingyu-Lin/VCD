@@ -1,7 +1,7 @@
 # Notes on pre-trained model
 Our pre-trained model, pre-collected dataset and the cached initial states for planning can be accessed throuth this google drive link: [Google Drive Link (14.3G)](https://drive.google.com/file/d/16KjI8ONMgfuUWMHWP1rT2x7B97n94BFo/view?usp=sharing)
 
-Loading the pretraine edge and dynamics GNN will require a corresponding `best_state.json` that stores the model information. They can be downloaded at this google drive link: [Google Drive Link](https://drive.google.com/drive/folders/1CdCodTJ65NGK2qMK0wjsaOp_Ra6sTmD7?usp=sharing). Just put these json files under the same directory as the pretrained model.
+Loading the pretraine edge and dynamics GNN will require a corresponding `best_state.json` that stores the model information. They can be downloaded at this google drive link: [Google Drive Link](https://drive.google.com/drive/folders/1CdCodTJ65NGK2qMK0wjsaOp_Ra6sTmD7?usp=sharing). Just put these json files under the same directory as the pre-trained model.
 
 Once uncompressed, you will find
 * `1213_release_n1000.pkl`: The cached initial states for training.
