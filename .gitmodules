@@ -1,0 +1,4 @@
+[submodule "softgym"]
+	path = softgym
+	url = https://github.com/Xingyu-Lin/softgym.git
+

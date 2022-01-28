@@ -1,0 +1,63 @@
+Bootstrap: debootstrap
+OSVersion: xenial
+MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+
+%help
+    This is a singularity container that runs Deep Reinforcement Learning algorithms on ubuntu
+    Packages installed include:
+        * cuda 9.0 and cuDNN
+    Will run ~/.bashrc on start to make sure the PATH is the same.
+
+%runscript
+    /usr/bin/nvidia-smi -L
+
+%environment
+    LD_LIBRARY_PATH=/usr/local/cuda-9.0/cuda/lib64:/usr/local/cuda-9.0/lib64:/usr/lib/nvidia-384$LD_LIBRARY_PATH
+
+%setup
+    echo "Let us have CUDA..."
+    sh /home/xingyu/software/cuda/cuda_9.0.176_384.81_linux.run --silent --toolkit --toolkitpath=${SINGULARITY_ROOTFS}/usr/local/cuda-9.0
+    ln  -s ${SINGULARITY_ROOTFS}/usr/local/cuda-9.0 ${SINGULARITY_ROOTFS}/usr/local/cuda
+    echo "Let us also have cuDNN..."
+    cp -prv /home/xingyu/software/cudnn/* ${SINGULARITY_ROOTFS}/usr/local/cuda-9.0/
+
+%labels
+    AUTHOR xlin3@cs.cmu.edu
+    VERSION v1.0
+
+%post
+    echo "Hello from inside the container"
+    sed -i 's/$/ universe/' /etc/apt/sources.list
+    touch /usr/bin/nvidia-smi
+    chmod +x /usr/bin/nvidia-smi
+
+    apt-get -y update
+    apt-get -y install software-properties-common vim make wget curl emacs ffmpeg git htop libffi-dev libglew-dev libgl1-mesa-glx libosmesa6 libosmesa6-dev libssl-dev mesa-utils module-init-tools openjdk-8-jdk python-dev python-numpy python-tk bzip2
+    apt-get -y install build-essential
+    apt-get -y install libgl1-mesa-dev libglfw3-dev
+    apt-get -y install strace
+
+    echo "Install openmpi 3.1.1"
+
+    cd /tmp
+    wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.1.tar.gz
+    tar xf openmpi-3.1.1.tar.gz
+    cd openmpi-3.1.1
+    mkdir -p build
+    cd build
+    ../configure
+    make -j 8 all
+    make install
+    apt-get -y install openmpi-bin
+    rm -rf /tmp/openmpi*
+    rm -rf /usr/bin/mpirun
+    ln -s /usr/local/bin/mpirun /usr/bin/mpirun
+
+    echo "Install mpi4py 3.0.0"
+    cd /tmp
+    wget https://bitbucket.org/mpi4py/mpi4py/downloads/mpi4py-3.0.0.tar.gz
+    tar -zxf mpi4py-3.0.0.tar.gz
+    cd mpi4py-3.0.0
+    python setup.py build --mpicc=
+    python setup.py install --user
+    mkdir -p /usr/lib/nvidia-384

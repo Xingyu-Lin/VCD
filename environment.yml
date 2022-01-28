@@ -1,0 +1,29 @@
+name: softgym
+channels:
+  - defaults
+dependencies:
+  - python=3.6.9
+  - numpy=1.16.4
+  - gym=0.15.7
+  - h5py
+  - pyg=2.0.1
+  - Pillow=6.1
+  - pyquaternion=0.9.5
+  - opencv-python=5.1.1
+  - imageio=2.6.1
+  - imageio-ffmpeg
+  - glob2=0.7
+  - cmake=3.14.0
+  - pybind11=2.4.3
+  - moviepy
+  - click
+  - matplotlib
+  - joblib
+  - plotly
+  - gtimer
+  - python-pcl
+  - pip:
+      - torch=1.9
+      - torchvision
+      - termcolor
+      - scikit-image
