@@ -68,11 +68,14 @@ Please refer to [this page](pretrained/README.md) for downloading the pretrained
 ## Cite
 If you find this codebase useful in your research, please consider citing:
 ```
-@inproceedings{lin2021VCD,
-title={Learning Visible Connectivity Dynamics for Cloth Smoothing},
-author={Lin, Xingyu and Wang, Yufei and Huang, Zixuan and Held, David},
-booktitle={Conference on Robot Learning},
-year={2021}}
+@inproceedings{lin2022learning,
+  title={Learning visible connectivity dynamics for cloth smoothing},
+  author={Lin, Xingyu and Wang, Yufei and Huang, Zixuan and Held, David},
+  booktitle={Conference on Robot Learning},
+  pages={256--266},
+  year={2022},
+  organization={PMLR}
+}
 
 @inproceedings{corl2020softgym,
  title={SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation},
