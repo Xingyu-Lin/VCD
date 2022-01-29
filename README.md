@@ -44,8 +44,8 @@ python VCD/main_plan.py --edge_model_path={path_to_trained_edge_model}\
 ```
 An example for loading the model trained for 120 epochs:
 ```
-python VCD/main_plan.py --edge_model_path=./data/vcd_edge/vsbl_edge_120.pth\
-                        --partial_dyn_path=./data/vcd_dyn/vsbl_dyn_120.pth
+python VCD/main_plan.py --edge_model_path ./data/vcd_edge/vsbl_edge_120.pth\
+                        --partial_dyn_path ./data/vcd_dyn/vsbl_dyn_120.pth
 ```
 ## Graph Imitation Learning
 1. Train dynamics using the full mesh
