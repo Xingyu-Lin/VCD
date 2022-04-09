@@ -12,4 +12,4 @@ Once uncompressed, you will find
 * `cloth_flatten_test_retangular_1.pkl` and `cloth_flatten_test_retangular_1.pkl`: Initial states for testing on rectangular clothes (each cached file has 20 states).
 * `tshirt_flatten_init_states_small_2021_05_28_01_22.pkl`: Initial states for testing on t-shirt (20 states).
 
-`tshirt_flatten_init_states_small_2021_05_28_01_16.pkl`: Initial states for testing on t-shirt on another 20 states can be downloaded via this [Google Drive Link](https://drive.google.com/drive/folders/1CdCodTJ65NGK2qMK0wjsaOp_Ra6sTmD7?usp=sharing)
+`tshirt_flatten_init_states_small_2021_05_28_01_16.pkl`: Initial states for testing on t-shirt using another 20 states can be downloaded via this [Google Drive Link](https://drive.google.com/drive/folders/1CdCodTJ65NGK2qMK0wjsaOp_Ra6sTmD7?usp=sharing)
