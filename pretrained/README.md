@@ -4,7 +4,7 @@ Our pre-trained model, pre-collected dataset and the cached initial states for p
 The goolge drive folder includes:
 * `dataset.zip`: Pre-collected dataset for training.
 * dynamics_model:  
-  - `vsbl_dyn_best.pth`: Pre-trained dynamics GNN for partially observed point cloud.
+  - `vsbl_dyn_140.pth`: Pre-trained dynamics GNN for partially observed point cloud.
   - `best_state.json`: Loading the pretraine edge and dynamics GNN will require a corresponding `best_state.json` that stores the model information. Just put these json files under the same directory as the pre-trained model. 
 * edge_model:  
   - `vsbl_edge_best.pth`: Pre-trained Edge GNN.
