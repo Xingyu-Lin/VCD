@@ -2,7 +2,7 @@
 Our pre-trained model, pre-collected dataset and the cached initial states for planning can be accessed throuth this google drive link: [Google Drive Link](https://drive.google.com/drive/folders/1gS8ejcY1imKVT8TD8zmNC38gNicpkL6X?usp=sharing)
 
 The goolge drive folder includes:
-* dataset: Pre-collected dataset for training.
+* `dataset.zip`: Pre-collected dataset for training.
 * dynamics_model:  
   - `vsbl_dyn_best.pth`: Pre-trained dynamics GNN for partially observed point cloud.
   - `best_state.json`: Loading the pretraine edge and dynamics GNN will require a corresponding `best_state.json` that stores the model information. Just put these json files under the same directory as the pre-trained model. 
