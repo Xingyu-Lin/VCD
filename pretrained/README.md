@@ -1,5 +1,5 @@
 # Notes on pre-trained model
-Our pre-trained model, pre-collected dataset and the cached initial states for planning can be accessed throuth this google drive link: [Google Drive Link](https://drive.google.com/drive/folders/1gS8ejcY1imKVT8TD8zmNC38gNicpkL6X?usp=sharing)
+Our pre-trained model, pre-collected dataset and the cached initial states for planning can be accessed through this google drive link: [Google Drive Link](https://drive.google.com/drive/folders/1gS8ejcY1imKVT8TD8zmNC38gNicpkL6X?usp=sharing)
 
 The goolge drive folder includes:
 * `dataset.zip`: Pre-collected dataset for training.
